@@ -1,0 +1,23 @@
+/* Main menu template */
+"use strict";
+FC360$.sTemplateMain=`
+<div id="fc-dashboard-toggle" class="view details-view hideObj">
+  <div id="fc-dashboard-container"> 
+    <header id="fc-dashboard-header">
+      ${FC360$.sTemplateOffcanvas}
+      <div id="fc-dashboard-title">
+        <h1 id="fc-dashboard-title-txt">${XYZ[39][iLang$]}</h1>
+      </div>
+    </header>
+    <section id="fc-dashboard-section">
+      <section id="fc-top-content"></section>
+      <div id="homeadmMainAll">
+        <div id="dashBoxes" class="dashList"></div>
+      </div>
+      <section id="fc-main-content"></section>
+    </section>
+    <div id="fc-report-detail" class="hideObj"></div>
+    ${FC360$.sTemplateFooter}
+  </div>
+</div>
+`;

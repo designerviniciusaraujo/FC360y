@@ -1,0 +1,26 @@
+/* Login template */
+"use strict";
+FC360$.sTemplateReportDetail=`
+<div class="fc-dashboard-box">
+
+  <div id="fc-reportdetail-container">
+    <h2 id="fc-reportdetail-reportname" class="fc-dashboard-box-main-title"></h2>
+    <div id="fc-reportdetail-close" onclick="FC360$.hideReportDetail();"><img src="images/icon-dashboard-close.svg" width="26" height="26"></div>
+  </div>
+
+  <p id="fc-reportdetail-reportdescr" class="fc-dashboard-box-main-paragraph"></p>
+  <div class="fc-dashboard-box-container">
+    <div class="fc-dashboard-box-content">
+
+      <form method="POST" onsubmit="return FC360$.executeReport()" name="reportParamsForm" id="reportParamsForm">
+        <div id="fc-reportdetail-reportparams" class="fc-dashboard-box-content-select-results-details"></div>
+        <div class="fc-dashboard-box-content-button">
+          <input value="Executar" class="fc-dashboard-box-content-button-search" type="submit">
+        </div>
+      </form>
+      <div id="fc-reportdetail-results"></div>
+
+    </div>
+  </div>
+</div>
+`;

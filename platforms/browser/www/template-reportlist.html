@@ -1,0 +1,34 @@
+/* Report list template */
+"use strict";
+FC360$.sTemplateReportList=`
+<section id="fc-dashboard-section">
+  <div id="fc-dashboard-section-all">
+    <div id="fc-reportlist-all">
+      <div class="fc-dashboard-box">
+        <h2 id="fc-reportlist-main-title" class="fc-dashboard-box-main-title"></h2>
+        <p class="fc-dashboard-box-main-paragraph">${XYZ[34][iLang$]}</p>
+        <div class="fc-dashboard-box-container">
+          <div class="fc-dashboard-box-content">
+  
+            <form method="POST" onsubmit="return FC360$.filterReportList()" name="reportListForm">
+              <div class="fc-dashboard-box-content-input-container">
+                <div class="fc-dashboard-box-content-input-title">${XYZ[35][iLang$]}:</div>
+                <input type="text" id="fc-reportlist-filtertext" maxlength="50" class="fc-dashboard-box-content-input">
+                <div class="fc-reportlist-show-all"><a href="#allReports" onclick="FC360$.showAllReports();">${XYZ[41][iLang$]}</a></div>
+              </div> 
+              <div class="fc-dashboard-box-content-button">
+                <input type="submit" name="butReportSearch" value="${XYZ[37][iLang$]}" class="fc-dashboard-box-content-button-search">
+              </div>
+
+            </form>
+  
+          </div>
+        </div>
+
+        
+      </div>
+      <div id="fc-reportlist-types"></div>
+    </div>
+  </div>
+</section>
+`;

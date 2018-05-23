@@ -1,0 +1,47 @@
+/* Offcanvas Menu template */
+"use strict";
+FC360$.sTemplateOffcanvas=`
+<div>
+  <a href="#main-menu" role="button" id="main-menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
+    <span aria-hidden="true"><img src="images/icon-dashboard-menu.svg" width="28" height="55"></span>
+  </a>
+  <nav id="main-menu" role="navigation" class="main-menu hideObj" aria-expanded="false" aria-label="Main menu">
+    <ul>
+      <li class="fc-side-nav-store-background">
+        <a href="${FCAdmVars$.sCompanySite}" target="_blank"><img src="images/fastcommerce-logo.svg" width="230" class="fc-side-nav-store-logo"></a>
+        <div class="fc-side-nav-store-information">
+
+
+          <div class="fc-side-nav-user-container-block">
+            <div class="fc-side-nav-user-container">
+              <img src="images/icon-dashboard-storename.svg" width="20" height="20">
+              <div class="fc-side-nav-size"><span id="fc-side-nav-storename"></span></div>
+            </div>
+            <div class="fc-side-nav-user-container fc-side-nav-user-container-contact">
+              <img src="images/icon-dashboard-contact.svg" width="20" height="20">
+              <div class="fc-side-nav-size"><span id="fc-side-nav-commercial"><a href="https://api.whatsapp.com/send?phone=5511995386596&text=Ol%C3%A1,%20Equipe%20Fastcommerce!" target="_blank">${XYZ[52][iLang$]}</a></span></div>
+            </div>
+          </div>
+
+          <div class="fc-side-nav-user-container-block">
+            <div class="fc-side-nav-user-container">
+              <img src="images/icon-dashboard-username.svg" width="20" height="20">
+              <div class="fc-side-nav-size"><span id="fc-side-nav-user"></span></div>
+            </div>
+            <div class="fc-side-nav-user-container fc-side-nav-user-container-contact">
+              <img src="images/icon-dashboard-contact.svg" width="20" height="20">
+              <div class="fc-side-nav-size"><span id="fc-side-nav-support"><a href="https://api.whatsapp.com/send?phone=5511995386596&text=Ol%C3%A1,%20Equipe%20Fastcommerce!" target="_blank">${XYZ[53][iLang$]}</a></span></a>
+            </div>
+          </div>
+
+
+        </div>
+      </li>
+      <li class="fc-dashboard-slidenav-icons"><a href="#" onclick="FC360$.showDash()"><img src="images/icon-dashboard-dashboard.svg" width="28" height="28"><span class="fc-offcanvas-menu-position">${XYZ[39][iLang$]}</span></a></li>
+      <li class="fc-dashboard-slidenav-icons"><a href="#" onclick="FC360$.showReportList()"><img src="images/icon-dashboard-reports.svg" width="28" height="28"><span class="fc-offcanvas-menu-position">${XYZ[22][iLang$]}</span></a></li>
+      <li class="fc-dashboard-slidenav-icons"><a href="#" onclick="FC360$.logoutUser()"><img src="images/icon-dashboard-logoff.svg" width="28" height="28"><span class="fc-offcanvas-menu-position">${XYZ[24][iLang$]}</span></a></li>
+    </ul>
+  </nav>
+  <a href="#main-menu-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
+</div>
+`;

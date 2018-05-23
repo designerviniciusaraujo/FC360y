@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">  <title>FC360</title>
+  <link href="fc360.css" rel="stylesheet">
+  <script>
+  // the default GA code, nothing to change
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  var fields = {
+  // note: you can use a single tracking id for both the app and the website,
+  // don't worry it won't mix the data. More about this in the 3rd section
+  trackingId: 'UA-119329127-1'
+  };
+  
+  // if we are in the app (the protocol will be file://)
+  if(document.URL.indexOf('http://') !== 0){
+  
+  // we store and provide the clientId ourselves in localstorage since there are no
+  // cookies in Cordova
+  fields.clientId = localStorage.getItem('ga:clientId');
+  // disable GA's cookie storage functions
+  fields.storage = 'none';
+  
+  ga('create', fields);
+  
+  // prevent tasks that would abort tracking
+  ga('set', {
+    // don't abort if the protocol is not http(s)
+    checkProtocolTask: null,
+    // don't expect cookies to be enabled
+    checkStorageTask: null
+  });
+  
+  // a callback function to get the clientId and store it ourselves
+  ga(function(tracker){
+    localStorage.setItem('ga:clientId', tracker.get('clientId'));
+  });
+  
+  // send a screenview event
+  ga('send', {
+    // these are the three required properties, check GA's doc for the optional ones
+    hitType: 'screenview',
+    // you can edit these two values as you wish
+    screenName: '/index.html',
+    appName: 'FC360',
+    appVersion: '1.0'
+  });
+  }
+  // if we are in a browser
+  else {
+  
+  ga('create', fields);
+  
+  // send a pageview event
+  ga('send', {
+    // this is required, there are optional properties too if you want them
+    hitType: 'pageview'
+  });
+  }
+  </script>
+
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="options.js"></script>
+  <script src="resources.js"></script>
+  <script src="fc360.js"></script>
+  <script src="fcadm.js"></script>
+  <script src="dashboxes.js"></script>
+  <script src="template-footer.html"></script>
+  <script src="template-login.html"></script>
+  <script src="template-offcanvas.html"></script>
+  <script src="template-main.html"></script>
+  <script src="template-reportlist.html"></script>
+  <script src="template-dashboardtop.html"></script>
+  <script src="template-reporttype.html"></script>
+  <script src="template-reportdetail.html"></script>
+</head>
+<body>
+
+</body>
+</html>

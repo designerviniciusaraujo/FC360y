@@ -1,0 +1,61 @@
+/* Login template */
+"use strict";
+FC360$.sTemplateLogin=`
+<div id="fc-login-toggle" class="view list-view hideObj">
+  <div id="fc-login-container">
+    <div id="fc-login-panel">
+     <!-- logo -->
+     <div id="fc-login-logo">
+       <a href="${FCAdmVars$.sCompanySite}" target="_blank"><img src="images/fastcommerce-logo.svg" alt="${FCAdmVars$.sBrand}" width="280"></a>
+     </div>
+  
+     <!-- Form -->
+     <div id="fc-login-form-container">
+       <div id="fc-login-form-container-title">
+         <div id="fc-login-form-container-login">
+           ${XYZ[0][iLang$]}
+         </div>
+         <div id="fc-login-form-container-users">
+           ${XYZ[1][iLang$]}
+         </div>
+       </div>
+  
+       <div id="fc-login-form-container-fields">
+        <form method="POST" onsubmit="return FC360$.validateLogin(false,this.butLogin)" name="loginForm">
+          <div class="fc-login-form-container-fields-group">      
+            <input type="text" class="fc-login-input" name="storename" value="${(localStorage.storename?localStorage.storename:'')}" required>
+            <span class="fc-login-highlight"></span>
+            <span class="fc-login-bar"></span>
+            <label class="fc-login-label">${XYZ[2][iLang$]}</label>
+            <div id="fc-storename-error"></div>
+          </div>
+          <div class="fc-login-form-container-fields-group">      
+            <input type="text" class="fc-login-input" name="username" value="${(localStorage.username?localStorage.username:'')}" required>
+            <span class="fc-login-highlight"></span>
+            <span class="fc-login-bar"></span>
+            <label class="fc-login-label">${XYZ[3][iLang$]}</label>
+            <div id="fc-username-error"></div>
+          </div>
+          <div class="fc-login-form-container-fields-group-last">      
+            <input type="password" class="fc-login-input" name="pwd" required autocomplete>
+            <span class="fc-login-highlight"></span>
+            <span class="fc-login-bar"></span>
+            <label class="fc-login-label">${XYZ[4][iLang$]}</label>
+            <div id="fc-password-error"></div>
+          </div>
+          <div id="fc-login-form-container-fields-forgot-password">
+            <a href="#" onclick="return FC360$.validateLogin(true,this.parentNode)">${XYZ[5][iLang$]}</a>
+          </div>
+          <div id="fc-login-form-container-fields-button">
+            <input type="submit" name="butLogin" value="${XYZ[6][iLang$]}">
+          </div>
+        </form>
+       </div>
+     </div>
+     <div id="fc-login-footer-container">
+       ${FC360$.sTemplateFooter}
+    </div>
+    </div>
+  </div>
+</div>
+`;

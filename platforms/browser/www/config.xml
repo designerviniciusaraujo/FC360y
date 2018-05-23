@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Fastcommerce</name>
+    <description>
+        Fastcommerce :: Login administrativo 360
+    </description>
+    <author email="suporte@fastcommerce.com.br" href="https://www.fastcommerce.com.br">
+        Fastcommerce
+    </author>
+    <access origin="*" />
+    <access origin="https://www.google-analytics.com" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <preference name="permissions" value="none" />
+</widget>
